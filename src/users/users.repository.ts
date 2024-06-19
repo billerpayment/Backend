@@ -18,7 +18,7 @@ export class UsersRepository {
         private jwtService: JwtService,
     ) {}
 
-    async create(createUserDto: CreateUserDto): Promise<UserDocument> {
+    async createUser(createUserDto: CreateUserDto): Promise<UserDocument> {
         let countResponse: CounterDocument;
         try {
             countResponse = await this.counterModel.findOneAndUpdate(

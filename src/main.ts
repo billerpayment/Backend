@@ -19,8 +19,8 @@ async function bootstrap() {
   const environment = process.env.NODE_ENV || '';
   if (environment == 'development') {
     const config = new DocumentBuilder()
-      .setTitle('Trade-lenda Loan Server')
-      .setDescription('Trade-lenda Loan Server')
+      .setTitle('Bilify Server')
+      .setDescription('Bilify Server')
       .setVersion('1.0')
       .addBearerAuth()
       .build();
