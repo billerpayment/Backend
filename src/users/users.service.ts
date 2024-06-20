@@ -10,11 +10,14 @@ import { Observable, from, map } from 'rxjs';
 import { CreateUserDto, LoginDto } from './dto/create-user.dto';
 import { User, UserDocument } from './schema/user.schema';
 import { UsersRepository } from './users.repository';
+import { EmailService } from 'src/common/services/email/email.service';
 
 
 @Injectable()
 export class UserService {
-    constructor(private readonly userRepository: UsersRepository) {}
+    constructor(private readonly userRepository: UsersRepository,
+        private emailService: EmailService,
+    ) { }
 
     async createUser(createUserDto: CreateUserDto): Promise<UserDocument> {
         try {
