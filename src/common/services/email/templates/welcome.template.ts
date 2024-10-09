@@ -156,7 +156,7 @@ export const welcomeEmailTemplate = (firstName: string, link: string) => ({
                 <div>
                     <a href="mailto:bilify6@gmail.com" style="color: #FFF" class="primary-btn btn">bilify6@gmail.com</a>   <a href ="#"  style="color: #FFF" class="primary-btn btn">WhatsApp</a>
                 </div>
-                <p>Trade Lenda and her team are here for you!
+                <p>Bilify and her team are here for you!
                 </p>
   
                 

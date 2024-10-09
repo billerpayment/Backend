@@ -76,4 +76,12 @@ export class UsersRepository {
 
         return { accessToken };
     }
+
+    async findOne(filter: FilterQuery<UserDocument>, options?: QueryOptions): Promise<UserDocument | null> {
+        try {
+            return await this.model.findOne(filter, {}, options).exec();  // Using exec() for better promise handling
+        } catch (error) {
+            throw new InternalServerErrorException('Failed to find user');
+        }
+    }
 }
