@@ -7,6 +7,7 @@ import { UserService } from './users.service';
 import { Counter, CounterSchema } from './schema/counter.schema';
 // import { HttpModule } from '@nestjs/axios';
 import { JwtModule } from '@nestjs/jwt';
+import { CommonModule } from 'src/common/common.module';
 
 
 @Module({
@@ -27,6 +28,7 @@ import { JwtModule } from '@nestjs/jwt';
                 schema: CounterSchema,
             },
         ]),
+        CommonModule,
     ],
     controllers: [UsersController],
     providers: [
